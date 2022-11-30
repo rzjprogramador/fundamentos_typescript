@@ -1,0 +1,20 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "description": "foo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsnd --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "*",
+    "ts-node-dev": "*",
+    "nodemon": "*",
+    "typescript": "*",
+    "@types/node": "*"
+  },
+  "dependencies": {}
+}
