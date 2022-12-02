@@ -1,15 +1,16 @@
-import User01 from '.'
+import User01, { ArgsUser01 } from '.'
 
-const reinaldo = { primeiroNome: 'Reinaldo', complementoNome: 'Junior 2 ' }
-const renata = { primeiroNome: 'Renata', complementoNome: 'Pereira 1 ' }
+const reinaldo = { primeiroNome: 'Reinaldo2', complementoNome: 'sobrenomeReinaldo' }
+const renata = { primeiroNome: 'Renata2', complementoNome: 'sobrenomeRenata' }
 
-const makeUser01 = new User01
+const makeUser01 = (arg: ArgsUser01) => {
+  const instance = new User01(arg)
+  return instance
+}
 
-// const instance1 = makeUser01(reinaldo)
-// const instance2 = makeUser01(renata)
+const instance1 = makeUser01(reinaldo)
+const instance2 = makeUser01(renata)
 
-const instance1 = new User01(reinaldo)
-const instance2 = new User01(renata)
 
 instance1.getNomeCompleto().then(fooData => console.log(fooData))
 instance2.getNomeCompleto().then(fooData => console.log(fooData))

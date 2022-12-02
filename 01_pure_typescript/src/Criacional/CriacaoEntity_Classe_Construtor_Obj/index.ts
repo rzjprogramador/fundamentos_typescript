@@ -1,15 +1,12 @@
-interface ArgsUser {
+export interface ArgsUser01 {
   primeiroNome: string
   complementoNome: string
 }
 
 export default class User01 {
   public readonly id?: string
-  static default: any
 
-  constructor(
-    private readonly args?: ArgsUser,
-  ) { }
+  constructor(private readonly args: ArgsUser01,) { }
 
   async getNomeCompleto() {
     return await `${this.args.primeiroNome} ${this.args.complementoNome}`

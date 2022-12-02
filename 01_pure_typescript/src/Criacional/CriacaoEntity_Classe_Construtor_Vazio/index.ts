@@ -5,7 +5,7 @@ interface ArgsUser {
   // getNomeCompleto?(): Promise<unknown>
 }
 
-export default class User02 {
+class User02 {
   public readonly id?: string
   public readonly args: ArgsUser
 
@@ -34,3 +34,4 @@ export default class User02 {
 
 }
 
+export default new User02
