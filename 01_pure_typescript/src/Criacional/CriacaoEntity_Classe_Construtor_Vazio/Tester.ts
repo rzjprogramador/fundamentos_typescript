@@ -1,24 +1,20 @@
-import User02 from './'
+import User02, { ArgsUser02 } from './'
 
 const reinaldo = { primeiroNome: 'Reinaldo2', complementoNome: 'Junior 2 ' }
 const renata = { primeiroNome: 'Renata', complementoNome: 'Pereira 1 ' }
 
-const makeUser01 = User02
+const makeUser02 = (arg: ArgsUser02) => {
+  const instance = User02.create(arg)
+  return instance
+}
 
-const instance1 = User02.create(reinaldo)
-const instance2 = User02.create(renata)
+const instance1 = makeUser02(reinaldo)
+const instance2 = makeUser02(renata)
 
-// const instance1 = makeUser01.create(reinaldo)
-// const instance2 = makeUser01.create(renata)
+ instance1.then(data => console.log(data)) 
+ instance2.then(data => console.log(data))
 
-// const instance1 = new User01(reinaldo)
-// const instance2 = new User01(renata)
-
-instance1.then(data => console.log(data))
-instance2.then(data => console.log(data))
-
+// TODO: FUNCIONAR PROTO
 // instance1.
-
-// TODO NAO CONSIGO COLOCAR NO PROTO DO OBJ AINDA
-// instance1.getNomeCompleto().then((data) => console.log(data))
+// instance1.getNomeCompleto().then(fooData => console.log(fooData))
 // instance2.getNomeCompleto().then(fooData => console.log(fooData))

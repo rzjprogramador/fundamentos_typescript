@@ -1,17 +1,15 @@
-interface ArgsUser {
+export interface ArgsUser02 {
   primeiroNome: string
   complementoNome: string
-  getNomeCompleto?(): Promise<string>
-  // getNomeCompleto?(): Promise<unknown>
 }
 
 class User02 {
   public readonly id?: string
-  public readonly args: ArgsUser
+  public readonly args: ArgsUser02
 
   constructor() { }
 
-  async create(args: ArgsUser) {
+  async create(args: ArgsUser02) {
     Object.assign(this, args)
     return await args
 
@@ -34,4 +32,4 @@ class User02 {
 
 }
 
-export default new User02
+export default new User02()
